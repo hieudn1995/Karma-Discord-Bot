@@ -17,12 +17,12 @@ class Bot(discord.Client):
         print('Connected as:', self.user)
 
     def load_karma_table(self):
-        with open('karma2.json', 'r') as infile:
+        with open('karma.json', 'r') as infile:
             self.karma_table = load(infile)
             infile.close()
 
     def save_karma_table(self):
-        with open('karma2.json', 'w') as outfile:
+        with open('karma.json', 'w') as outfile:
             dump(self.karma_table, outfile)
             outfile.close()
 
